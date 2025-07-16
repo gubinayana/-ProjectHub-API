@@ -9,10 +9,15 @@
 
 ### POST /users
 **Назначение:** Создание нового пользователя, добавление его в систему.
+
 **Контакт:** support@example.com
-**Версия API:** v1 (если известно)
+
+**Версия API:** v1 
+
 **Базовый адрес:** api.example.com
+
 **Описание:** Создание нового пользователя, с указанием имени, email, и пароля.
+
 **Авторизация:** Требуется токен доступа. Токен передаётся в заголовке `Authorization` в следующем формате: Authorization: Bearer<token>. 
 `Пример: Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...`
 
@@ -59,7 +64,7 @@ Content-Type: application/json
   "createdAt": "2025-05-26T10:00:00Z"
 }
 ```
-## Возможные ошибки
+#### Возможные ошибки
 
 | Код ответа | Сообщение                   | Описание   | Рекомендации|
 |------------|-----------------------------|----------------------------------------------------|-------|
@@ -67,7 +72,7 @@ Content-Type: application/json
 | `409`      |`{"error": "User with this email exists"}`| 	Conflict — пользователь уже существует |Используйте другой email| 
 | `500`      |`{"error": "Unexpected server error"}`| Internal Server Error — сбой сервера  | Повторите запрос позже или обратитесь в поддержку| 
 
-## Пример ответа с ошибкой
+#### Пример ответа с ошибкой
 ```json
 {
   "error": "Unexpected server error"
@@ -76,10 +81,15 @@ Content-Type: application/json
 
 ### GET /users
 **Назначение:** Получение списка пользователей.
+
 **Контакт:** support@example.com
-**Версия API:** v1 (если известно)
+
+**Версия API:** v1 
+
 **Базовый адрес:** api.example.com
+
 **Описание:** Получение списка пользователей с поддержкой пагинации.
+
 **Авторизация:** Требуется токен доступа. Токен передаётся в заголовке `Authorization` в следующем формате: Authorization: Bearer<token>. 
 `Пример: Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...`
 
@@ -151,10 +161,15 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 
 ### GET /users/{id}
 **Назначение:** Получение информации о пользователе.
+
 **Контакт:** support@example.com
-**Версия API:** v1 (если известно)
+
+**Версия API:** v1 
+
 **Базовый адрес:** api.example.com
+
 **Описание:** Получение информации о пользователе по его ID.
+
 **Авторизация:** Требуется токен доступа. Токен передаётся в заголовке `Authorization` в следующем формате: Authorization: Bearer<token>. 
 `Пример: Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...`
 
