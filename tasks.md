@@ -11,10 +11,15 @@
 
 ### POST /tasks
 **Назначение:** Создание новой задачи, добавление ее в систему.
+
 **Контакт:** support@example.com
+
 **Версия API:** v1 
+
 **Базовый адрес:** api.example.com
+
 **Описание:** Создание новой задачи, с указанием названия, описания, статуса, приоритетности, даты дедлайна, ID проекта, ID исполнителя задачи.
+
 **Авторизация:** Требуется токен доступа. Токен передаётся в заголовке `Authorization` в следующем формате: Authorization: Bearer <token>. 
 `Пример: Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...`
 
@@ -75,7 +80,7 @@ Content-Type: application/json
   "createdAt": "2025-06-10T12:00:00Z"
 }
 ```
-## Возможные ошибки
+#### Возможные ошибки
 
 | Код ответа | Сообщение                   | Описание   | Рекомендации|
 |------------|-----------------------------|----------------------------------------------------|-------|
@@ -83,7 +88,7 @@ Content-Type: application/json
 | `409`      |`{"error": "Task with this title exists"}`| 	Conflict — задача с таким названием уже существует | Используйте другое название|  
 | `500`      |`{"error": "Unexpected server error"}`| Internal Server Error — сбой сервера  | Повторите запрос позже или обратитесь в поддержку| 
 
-## Пример ответа с ошибкой
+#### Пример ответа с ошибкой
 ```json
 {
   "error": "Task with this title exists"
@@ -92,10 +97,15 @@ Content-Type: application/json
 
 ### GET /tasks
 **Назначение:** Получение списка задач.
+
 **Контакт:** support@example.com
+
 **Версия API:** v1 
+
 **Базовый адрес:** api.example.com
+
 **Описание:** Получение списка задач по ID проекта, ID ответственного с фильтрацией по статусу.
+
 **Авторизация:** Требуется токен доступа. Токен передаётся в заголовке `Authorization` в следующем формате: Authorization: Bearer <token>. 
 `Пример: Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...`
 
@@ -180,10 +190,15 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 
 ### GET /tasks/{id} 
 **Назначение:** Получение данных о конкретной задаче.
+
 **Контакт:** support@example.com
+
 **Версия API:** v1 
+
 **Базовый адрес:** api.example.com
+
 **Описание:** Получение данных задачи по ID.
+
 **Авторизация:** Требуется токен доступа. Токен передаётся в заголовке `Authorization` в следующем формате: Authorization: Bearer <token>. 
 `Пример: Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...`
 
@@ -241,10 +256,15 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 ```
 ### PATCH /tasks/{id} 
 **Назначение:** Частичное обновление задачи.
+
 **Контакт:** support@example.com
+
 **Версия API:** v1 
+
 **Базовый адрес:** api.example.com
+
 **Описание:** Частичное обновление данных задачи по ID: обновляет название, описание, статус, приоритет, дату окончания или ID ответственного. 
+
 **Авторизация:** Требуется токен доступа. Токен передаётся в заголовке `Authorization` в следующем формате: Authorization: Bearer <token>. 
 `Пример: Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...`
 
