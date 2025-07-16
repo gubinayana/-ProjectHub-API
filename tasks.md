@@ -346,10 +346,15 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 
 ### DELETE /tasks/{id}
 **Назначение:** Удаление задачи.
+
 **Контакт:** support@example.com
+
 **Версия API:** v1 
+
 **Базовый адрес:** api.example.com
+
 **Описание:** Удаление данных задачи по ID. 
+
 **Авторизация:** Требуется токен доступа. Токен передаётся в заголовке `Authorization` в следующем формате: Authorization: Bearer <token>. 
 `Пример: Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...`
 
