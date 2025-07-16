@@ -11,10 +11,15 @@
 
 ### POST /projects
 **Назначение:** Создание нового проекта, добавление его в систему.
+
 **Контакт:** support@example.com
+
 **Версия API:** v1 
+
 **Базовый адрес:** api.example.com
+
 **Описание:** Создание нового проекта, с указанием названия, описания, дат создания и завершения, ID владельца проекта.
+
 **Авторизация:** Требуется токен доступа. Токен передаётся в заголовке `Authorization` в следующем формате: Authorization: Bearer<token>. 
 `Пример: Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...`
 
@@ -67,7 +72,7 @@ Content-Type: application/json
   "createdAt": "2025-06-10T12:00:00Z"
 }
 ```
-## Возможные ошибки
+#### Возможные ошибки
 
 | Код ответа | Сообщение                   | Описание   | Рекомендации|
 |------------|-----------------------------|----------------------------------------------------|-------|
@@ -75,7 +80,7 @@ Content-Type: application/json
 | `409`      |`{"error": "Project with this title exists"}`| 	Conflict — проект с таким названием уже существует |Используйте другое название|  
 | `500`      |`{"error": "Unexpected server error"}`| Internal Server Error — сбой сервера  | Повторите запрос позже или обратитесь в поддержку| 
 
-## Пример ответа с ошибкой
+#### Пример ответа с ошибкой
 ```json
 {
   "error": "Project with this title exists"
@@ -84,9 +89,13 @@ Content-Type: application/json
 
 ### GET /projects
 **Назначение:** Получение списка проектов.
+
 **Контакт:** support@example.com
+
 **Версия API:** v1 
+
 **Базовый адрес:** api.example.com
+
 **Описание:** Получение списка проектов по ID владельца и фильтрации по статусу.
 
 **Авторизация:** Требуется токен доступа. Токен передаётся в заголовке `Authorization` в следующем формате: Authorization: Bearer<token>. 
@@ -173,10 +182,15 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 
 ### GET /projects/{id} 
 **Назначение:** Получение данных проекта.
+
 **Контакт:** support@example.com
+
 **Версия API:** v1 
+
 **Базовый адрес:** api.example.com
+
 **Описание:** Получение данных проекта по ID.
+
 **Авторизация:** Требуется токен доступа. Токен передаётся в заголовке `Authorization` в следующем формате: Authorization: Bearer<token>. 
 `Пример: Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...`
 
@@ -234,10 +248,15 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 ```
 ### PATCH /projects/{id} 
 **Назначение:** Частичное обновление проекта.
+
 **Контакт:** support@example.com
+
 **Версия API:** v1 
+
 **Базовый адрес:** api.example.com
+
 **Описание:** Частичное обновление данных проекта по ID: обновляет название, описание или дату окончания. 
+
 **Авторизация:** Требуется токен доступа. Токен передаётся в заголовке `Authorization` в следующем формате: Authorization: Bearer<token>. 
 `Пример: Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...`
 
@@ -307,10 +326,15 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 
 ### DELETE /projects/{id}
 **Назначение:** Удаление проекта.
+
 **Контакт:** support@example.com
+
 **Версия API:** v1 
+
 **Базовый адрес:** api.example.com
+
 **Описание:** Удаление данных проекта по ID. 
+
 **Авторизация:** Требуется токен доступа. Токен передаётся в заголовке `Authorization` в следующем формате: Authorization: Bearer<token>. 
 `Пример: Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...`
 
