@@ -50,7 +50,7 @@ Content-Type: application/json
   "refreshToken": "9ed31de9-bd8d-4d00-96a3-10130b9e8d67"
 }
 ```
-## Возможные ошибки
+#### Возможные ошибки
 
 | Код ответа | Сообщение                   | Описание   | Рекомендации|
 |------------|-----------------------------|----------------------------------------------------|-------|
@@ -58,7 +58,7 @@ Content-Type: application/json
 | `401`      |`	{"error": "Invalid email or password"}`| Неверные учетные данные | Введите корректные логин и пароль|  
 | `500`      |`{"error": "Unexpected server error"}`| Internal Server Error — сбой сервера  | Повторите запрос позже или обратитесь в поддержку| 
 
-## Пример ответа с ошибкой
+#### Пример ответа с ошибкой
 ```json
 {
   "error": "Invalid email or password"
@@ -105,7 +105,7 @@ Content-Type: application/json
   "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
 }
 ```
-## Возможные ошибки
+#### Возможные ошибки
 
 | Код ответа | Сообщение                   | Описание   | Рекомендации|
 |------------|-----------------------------|----------------------------------------------------|-------|
@@ -113,7 +113,7 @@ Content-Type: application/json
 | `403`      |`{"error": "Refresh token is invalid or expired" }`| Доступ запрещён | Невозможно выполнить операцию с текущим уровнем доступа|  
 | `500`      |`{"error": "Unexpected server error"}`| Internal Server Error — сбой сервера  | Повторите запрос позже или обратитесь в поддержку| 
 
-## Пример ответа с ошибкой
+#### Пример ответа с ошибкой
 ```json
 {
   "error": "Refresh token is invalid or expired"
